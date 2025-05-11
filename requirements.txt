@@ -6,4 +6,4 @@ matplotlib
 datetime 
 requests
 streamlit-autorefresh
-
+openpyxl
