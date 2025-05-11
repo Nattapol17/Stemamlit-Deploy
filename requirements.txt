@@ -1,11 +1,9 @@
 streamlit
 pandas
 numpy
-scipy.optimize 
-curve_fit
-matplotlib.pyplot 
-datetime 
+scipy
+matplotlib
 datetime 
 requests
-streamlit_autorefresh
-st_autorefresh
+streamlit-autorefresh
+
