@@ -67,7 +67,7 @@ with tab4:
 with tab3:
     st.markdown("<h1 style='text-align: center; font-size: 30px;'>🏭 Inventory Status</h1>", unsafe_allow_html=True)
     st_autorefresh(interval=2000, key="datarefresh")
-    url = 'https://hot-tigers-show.loca.lt'
+    url = 'https://common-carpets-fetch.loca.lt/data'
     def led_indicator(value):
         if value == 1:
             color = "red"
