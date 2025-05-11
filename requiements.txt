@@ -1,0 +1,9 @@
+streamlit
+pandas
+numpy
+scipy.optimize import curve_fit
+matplotlib.pyplot 
+datetime 
+requests
+streamlit_autorefresh import st_autorefresh
+
