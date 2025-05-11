@@ -1,9 +1,0 @@
-streamlit
-pandas
-numpy
-scipy
-matplotlib.pyplot 
-datetime 
-requests
-streamlit_autorefresh import st_autorefresh
-
