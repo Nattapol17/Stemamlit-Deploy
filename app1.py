@@ -51,7 +51,7 @@ with tab2:
                     ax.axvline(next_day, linestyle='--', color='gray', label=f'Day {next_day}')
                     ax.legend()
                     ax.grid(True)
-                    ax.set_title(f'📦 Item: {name} – Predicted: {predicted}')
+                    ax.set_title(f'ID: {name} – Predicted: {predicted}')
                     ax.set_xlabel(f'Days since {start_date.strftime("%Y-%m-%d")}')
                     ax.set_ylabel("Quantity")
                     st.pyplot(fig)
