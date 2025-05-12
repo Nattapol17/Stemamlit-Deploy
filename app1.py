@@ -26,8 +26,7 @@ with tab2:
             df = df[df['Date'] <= today]
             group_col = 'ID' 
             df = df.groupby([group_col, 'Date'], as_index=False)['Quantity'].sum()
-            def func(x, a, b, c):
-                return a * np.exp(-b * x) + c
+          
             for name, group in df.groupby(group_col):
                 group = group.dropna(subset=['Date', 'Quantity'])
                 if len(group) < 3:
@@ -48,7 +47,7 @@ with tab2:
 
                     fig, ax = plt.subplots(figsize=(8, 4))
                     ax.scatter(xdata, ydata, s=10, label='Actual Data')
-                    ax.plot(xdata, poly(xdata), 'r-', label='Polynomial Fit')
+                    ax.plot(xdata, poly(xdata), 'r-', label='Curve Fit')
                     ax.axvline(next_day, linestyle='--', color='gray', label=f'Day {next_day}')
                     ax.legend()
                     ax.grid(True)
