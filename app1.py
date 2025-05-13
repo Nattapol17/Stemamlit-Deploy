@@ -9,7 +9,7 @@ import requests
 from streamlit_autorefresh import st_autorefresh
 
 st.set_page_config(page_title="Automated inventory model", layout="centered")
-tab1, tab2, tab3, tab4  = st.tabs(["🏠 Home", "📊 Inventory Forecasting", "🖥️ Inventory Status", "📋 Inventory Track"])
+tab1, tab2, tab3  = st.tabs(["🏠 Home", "📊 Inventory Forecasting", "🖥️ Inventory Status"])
 with tab1:
     st.markdown("<h1 style='text-align: center; font-size: 30px;'>📦 Automated inventory model Web App</h1>", unsafe_allow_html=True)
     st.image("ปก.jpg", use_container_width=True)
@@ -61,8 +61,6 @@ with tab2:
                     st.error(f"❌ Error fitting data for {name}: {e}")
         except Exception as e:
             st.error(f"❌ ไม่สามารถอ่านไฟล์: {e}")
-with tab4:
-    st.markdown("<h1 style='text-align: center; font-size: 30px;'>🏷️ Inventory Track</h1>", unsafe_allow_html=True)
 with tab3:
     st.markdown("<h1 style='text-align: center; font-size: 30px;'>🏭 Inventory Status</h1>", unsafe_allow_html=True)
     st_autorefresh(interval=2000, key="datarefresh")
