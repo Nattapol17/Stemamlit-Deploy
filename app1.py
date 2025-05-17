@@ -55,7 +55,7 @@ with tab2:
                     ax.set_xlabel(f'Days since {start_date.strftime("%Y-%m-%d")}')
                     ax.set_ylabel("Quantity")
                     st.pyplot(fig)
-                    st.success(f"📅 Predicted next-day inventory for **{name}**: `{predicted}`")
+                    st.success(f"📅 Predicted next-day inventory for **{name}**: `{predicted} (Piece)`")
                     st.caption("🧠 Polynomial Coefficients → " + ", ".join([f"{c:.3f}" for c in coeffs]))
                 except Exception as e:
                     st.error(f"❌ Error fitting data for {name}: {e}")
