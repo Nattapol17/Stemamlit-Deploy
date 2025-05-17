@@ -38,7 +38,7 @@ with tab2:
                 xdata = group['days'].values
                 ydata = group['Quantity'].values
                 try:
-                    degree = 2  # ลองใช้ polynomial อันดับ 2 (สามารถเปลี่ยนเป็น 3 หรือมากกว่านี้ได้)
+                    degree = 2  
                     coeffs = np.polyfit(xdata, ydata, degree)
                     poly = np.poly1d(coeffs)
                     next_day = group['days'].max() + 1
@@ -51,7 +51,7 @@ with tab2:
                     ax.axvline(next_day, linestyle='--', color='gray', label=f'Day {next_day}')
                     ax.legend()
                     ax.grid(True)
-                    ax.set_title(f'ID: {name} – Predicted: {predicted}')
+                    ax.set_title(f'ID: {name} – Predicted: {predicted} (Piece)')
                     ax.set_xlabel("Number of day")
                     ax.set_ylabel("Quantity (Piece)")
                     st.pyplot(fig)
